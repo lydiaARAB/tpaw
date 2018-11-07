@@ -9,6 +9,12 @@
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
+        <!--Charger les biblio dont on n'a besoins-->
+        <link rel="" href="bootstrap-4.0.0-dist/css/bootstrap.min.css">
+        <script src="bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+        <script src="bootstrap-4.0.0-dist/js/jquery-3.2.1.slim.min.js"></script>
+        <script src="bootstrap-4.0.0-dist/js/popper.min.js"></script>
+        <script src="bootstrap-4.0.0-dist/js/form-jquery-validation.js"></script>
 
         <style>
           body{
@@ -25,9 +31,41 @@
         <!--<script src="main.js"></script>-->
     </head>
     <body>        
-        <h1>tp3</h1>
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-        <img src="../galilee.png" alt="Logo Galilee"/>
+        <div class="container">
+            <div class="row">
+              <div class="col-sm">
+                One of three columns
+              </div>
+              <div class="col-sm">
+                
+                <form>
+                    <div class="form-group">
+                      <label for="nom">Nom </label>
+                      <input type="text" class="form-control" id="nom" placeholder="Votre Prenom !" class="form1">
+                    </div>
+                    <div class="form-group">
+                      <label for="prenom">Another label</label>
+                      <input type="text" class="form-control" id="prenom" placeholder="Votre Prenom !" class="form1">
+                    </div>
+                    <div class="form-group">
+                        <label for="date_nais">Date De Naissance</label>
+                        <input type="text" class="form-control" id="date_nais" placeholder="Votre Date de Naissance !" class="form1">
+                    </div>  
+                    <div class="form-group">
+                        <label for="adresse">Another label</label>
+                        <input type="email" class="form-control" id="adresse" placeholder="Votre Adress !" class="form1">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Mail</label>
+                        <input type="date" class="form-control" id="email" placeholder="Votre Prenom !" class="form1">
+                    </div>
+                    <button type="button" class="btn btn-primary" >Valider</button>
+                </form>
+              </div>
+              <div class="col-sm">
+                One of three columns
+              </div>
+            </div>
+          </div>
     </body>
 </html>
