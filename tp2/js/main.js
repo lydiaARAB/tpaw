@@ -8,16 +8,15 @@ function validation(){
 
     if( validateItem("nom", "error1")    && 
         validateItem("prenom", "error2") &&
-        validateItem("adress","error3")  &&
+        validateItem("adresse","error3")  &&
         validateItem("mail","error4")    &&
         validateItem("date_naissance","error5") )
     {
         var d= document.querySelector("#resultat");
         d.style.backgroundColor='rgb(0, 128, 0)';
         d.style.padding='3px';
-        var t=  document.getElementById("txt");
-        t.style.color="rgb(255, 255, 255)";
-        t.innerHTML="Bienvenue"+" "+document.querySelector("#prenom").value; 
+        d.style.color="rgb(255, 255, 255)";
+        d.innerHTML="Bienvenue"+" "+document.querySelector("#prenom").value; 
     }
 
 
@@ -36,10 +35,8 @@ function validation(){
             error.innerHTML="la saisie de "+ label.textContent +" est obligatoire ! ";
             return false;
         } else { 
-    
-            error.innerHTML = "";
-            error.style.backgroundColor='#e9ebee';
-            error.style.border=null;
+           error.style.backgroundColor=" #e9ebee";
+           error.innerHTML="";
             return true;
         }
     
