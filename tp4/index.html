@@ -17,6 +17,7 @@
     <!--Gestion de localisation -->
     <script src="js/gps.js"></script>
     <script src="js/form-jquery-validation.js"></script>
+    <script src="js/store.js"></script>
 
 </head>
 
@@ -87,7 +88,7 @@
             </div>
             <div class="form-row">
                 <div class="form-group col">
-                    <button type="button" class="btn btn-primary">Ajouter</button>
+                    <button type="button" class="btn btn-primary" id="submit">Ajouter</button>
                 </div>
             </div>
         </form>
@@ -105,33 +106,9 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>oConnor</td>
-                    <td>Sarah</td>
-                    <td>21/01/2000</td>
-                    <td>
-                        <a href="https://maps.google.com/?q=Paris">Paris</a>
-                    </td>
-                    <td>
-                        <a href="mailto:sarah.oconnor@blabla.com">sarah.oconnor@blabla.com</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Vandamme</td>
-                    <td>JL</td>
-                    <td>01/01/1950</td>
-                    <td>
-                        <a href="https://maps.google.com/?q=Bali">Bali</a>
-                    </td>
-                    <td>
-                        <a href="mailto:jlv@blabla.com">jlv@blabla.com</a>
-                    </td>
-                </tr>
+               
             </tbody>
         </table>
-
-
-
 
         <div class="modal" tabindex="-1" role="dialog" id="myModal">
             <div class="modal-dialog" role="document">
