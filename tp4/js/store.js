@@ -16,12 +16,12 @@ var contactStore = (function () {
     // the implementation of the module within the function() block
 
     return {
-        add: function (_name, _firsname, _date, _adress, _mail) {
+        add: function (_name, _firsname, _birth, _adresse, _mail) {
             var contact = {
                 name: _name,
                 firstname: _firsname,
-                date: _date,
-                adress: _adress,
+                birth: _birth,
+                adresse: _adresse,
                 mail: _mail
             };
             // ajout du contact à la liste

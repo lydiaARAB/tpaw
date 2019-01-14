@@ -20,41 +20,52 @@ $(document).ready(function () {
     var
         name = document.querySelector("#name").value,
         firstname = document.querySelector("#firstname").value,
-        date = document.querySelector("#birth").value,
-        adress = document.querySelector("#adresse").value,
+        birth = document.querySelector("#birth").value,
+        adresse = document.querySelector("#adresse").value,
         mail = document.querySelector("#mail").value;
 
-        contactStore.add(name, firstname, date, adress, mail);
+        if( validateItem("name") && validateItem("firstname") && validateItem("birth")&& 
+        validateItem("adresse") && validateItem("mail") )
+        {
+        d1.innerHTML="";
+        d1.style=
+        contactStore.add(name, firstname, birth, adresse, mail);
         contactList = contactStore.getList();
         document.querySelector("table tbody").innerHTML = "";
         for (var index in contactList) {
           document.querySelector("table tbody").innerHTML =document.querySelector("table tbody").innerHTML +
           '<td>' +contactList[index].name + 
           '</td><td>' + contactList[index].firstname+ 
-          '</td><td>'+contactList[index].date+
-          '</td><td>'+contactList[index].adress+
+          '</td><td>'+contactList[index].birth+
+          '</td><td>'+contactList[index].adresse+
           '</td><td>'+contactList[index].mail+'</td>';
          
-      }
-    
-});
-
-var geocoder = new google.maps.Geocoder;
-var latlng = {lat: position.coords.latitude, lng: position.coords.longitude};
-
-geocoder.geocode({'location': latlng}, function(results, status) {
-    if (status === 'OK') {
-      if (results[0]) {
-       
-       $("#adresse").val(results[0].formatted_address);
-      } else {
-        window.alert('No results found');
-      }
-    } else {
-      window.alert('Geocoder failed due to: ' + status);
+      }  
     }
-  });
+    else {
+            d1=document.querySelector("#verf");
+            d1.innerHTML="";
+            d1.style.backgroundColor="#e9ebee"
+            d1.style.border='1px black';
+            d1.style.padding='5px';
+            d1.innerHTML="Faut remplir tous les champs ! ";
+    }
 
+    
+    function validateItem(_id){
+        var el = document.querySelector("#"+_id);
+    
+        if (el.value.length<4) { 
+            return false;
+        } else { 
+           
+           return true;
+        }
+    
+    }
+
+
+});
 });
 
 
