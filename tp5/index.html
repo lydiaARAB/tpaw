@@ -14,9 +14,13 @@
               background-color: #e9ebee;              
               font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
               font-size: 16px;
-              margin: 0 auto;
-              max-width: 800px;              
+              max-width: 1000px;
+             
+                          
           }
+          .center {
+              margin-left: 300px;
+            }
         </style>
         
         <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
@@ -26,13 +30,14 @@
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <script src="js/main.js"></script>
         <script src="js/libs/vue.js"></script>
+        <link rel="stylesheet" href="weather-icons-master/css/weather-icons.min.css">
     </head>
     <body>      
-            <div id="weatherApp">  
+        <div id="weatherApp" class ="center">  
         <h1>TP5</h1>
         <!-- Add your site or application content here -->
         <p>Hello world! This is HTML5 Boilerplate.</p>
-        <img src="../galilee.png" alt="Logo Galilee"/>
+       
 
             <!-- formulaire de saisie de ville -->
             <!--l’instruction v-on sert à écouter les évènements du DOM afin d’exécuter
@@ -70,6 +75,7 @@
 
 
         <!-- meteo de la ville selectionnée -->
+       
 <div v-if="cityWeatherLoading"> Chargement de la météo...</div>
 <div v-if="cityWeather">
 
@@ -82,7 +88,8 @@
         <div class="card-body">
             <h5 class="card-title">
                 <i v-bind:class="'wi wi-owm-day-'+cityWeather.weather[0].id"></i>
-                {{cityWeather.main.temp}}<i class="wi wi-celsius"></i>                            
+                {{cityWeather.main.temp}}<i class="wi wi-celsius"></i>
+                                          
             </h5>
             <p class="card-text">{{cityWeather.weather[0].description}}</p>
         </div>
