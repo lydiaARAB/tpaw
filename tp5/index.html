@@ -8,37 +8,30 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
-        <style>
-          body{
-              background-color: #e9ebee;              
-              font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-              font-size: 16px;
-              max-width: 1000px;
-             
-                          
-          }
-          .center {
-              margin-left: 300px;
-            }
-        </style>
-        
+        <!-- Place favicon.ico in the root directory -->    
         <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-        <!--<link rel="stylesheet" href="style.css">-->
+        
         <!--<script src="main.js"></script>-->
         <script src="js/libs/bootstrap.min.js"></script>
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <script src="js/main.js"></script>
         <script src="js/libs/vue.js"></script>
+        
         <link rel="stylesheet" href="weather-icons-master/css/weather-icons.min.css">
+        <link rel="stylesheet" href="style.css">
     </head>
-    <body>      
-        <div id="weatherApp" class ="center">  
-        <h1>TP5</h1>
+    <body >
+      
+            <div class="i-large"></div>
+            <div class="i-medium"></div>
+            <div class="i-small"></div>
+        
+    
+    <a href="https://galilee.univ-paris13.fr/master/master-ingenierie-innovation-images-reseaux-m3ir/" target="_blank"><img class="gallilee" src="../galilee.png" alt="Logo Galilee"/></a>
+    <div class="container"></div>
+        <div id="weatherApp">  
+        <h1>TP5 Météo Avec WeatherApp</h1>
         <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-       
-
             <!-- formulaire de saisie de ville -->
             <!--l’instruction v-on sert à écouter les évènements du DOM afin d’exécuter
             du JavaScript lorsque ces évènements surviennent-->
@@ -79,7 +72,7 @@
 <div v-if="cityWeatherLoading"> Chargement de la météo...</div>
 <div v-if="cityWeather">
 
-    <div class="card" style="width: 18rem;" v-if="cityWeather">
+    <div class="card" style="width: 28rem;" v-if="cityWeather">
         <div class="card-header">
             {{cityWeather.name}} 
         </div>
@@ -117,6 +110,7 @@
     </div>
 </div>
 </div>
-        
-    </body>
+</div>
+  
+</body>
 </html>
