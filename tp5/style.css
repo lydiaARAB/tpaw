@@ -7,16 +7,28 @@
 	padding:0;
 	font-familly: sans-serif;
 	width:88%;
-	height:100vh;
+    height:100vh;
+    background-color: #000000cf;
         }
  
-      
+        .h4, h4 {
+            font-size: 1.5rem;
+            font-size: 40px;
+            font-style: italic;
+            color: aquamarine;
+        }
+        .h1, h1 {
+            font-size: 50px;
+            font-style: italic;
+            color: aquamarine;
+        }
          
         .i-large,
         .i-medium,
         .i-small {
             position : absolute;
             top: 0; right: 0; bottom: 0; left: 0;
+            height: 2000px;
         }
          
         .i-large {
@@ -81,7 +93,7 @@
         background-color:blue;
         float: left;	
         border: none;
-        border-radius: 2px;	
+        border-radius: 4px;	
     
     }
     .btn-secondary:hover
@@ -89,7 +101,7 @@
         color: #e01a2d;
         font-weight: bold;
         border : none;
-        box-shadow:1px 1px 1px black;
+        box-shadow:2px 2px 2px black;
         background-color: rgb(172, 39, 39);
         transform: scale(1.05);
         cursor: pointer;
@@ -99,11 +111,12 @@
     {
         width: 100%;
         margin:auto;
-        padding: 5px;
+        padding: 8px;
         margin-top: 10px;
         text-align: center;	
-        border-radius: 3px;
+        border-radius: 4px;
     }
+    
     
     .card
     {
