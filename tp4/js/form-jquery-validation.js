@@ -28,7 +28,6 @@ $(document).ready(function () {
         validateItem("adresse") && validateItem("mail") )
         {
         d1.innerHTML="";
-        d1.style=
         contactStore.add(name, firstname, birth, adresse, mail);
         contactList = contactStore.getList();
         document.querySelector("table tbody").innerHTML = "";
